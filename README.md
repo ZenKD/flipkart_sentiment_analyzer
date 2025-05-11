@@ -57,9 +57,11 @@ The application utilizes Selenium and BeautifulSoup for data extraction, NLTK's 
 
 
 **Figure 1: Homepage with URL input form**
-![Homepage](https://github.com/user-attachments/assets/abddf4f0-8010-45d3-a7d7-b287ee3a44f7)
+
+![image](https://github.com/user-attachments/assets/abddf4f0-8010-45d3-a7d7-b287ee3a44f7)
 
 **Figure 2: Results page with sentiment analysis visualizations**
+
 ![image](https://github.com/user-attachments/assets/c7e3e552-f908-405e-bdc0-9663fb154e35)
 
 
