@@ -55,7 +55,6 @@ The application utilizes Selenium and BeautifulSoup for data extraction, NLTK's 
 
 ## 🖼️ Screenshots
 
-*(Consider adding screenshots of your application here. For example:)*
 
 **Figure 1: Homepage with URL input form**
 ![Homepage](https://github.com/user-attachments/assets/abddf4f0-8010-45d3-a7d7-b287ee3a44f7)
