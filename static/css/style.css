@@ -1,0 +1,80 @@
+/* static/css/style.css */
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-header {
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: #3f51b5;
+    border-color: #3f51b5;
+}
+
+.btn-primary:hover {
+    background-color: #303f9f;
+    border-color: #303f9f;
+}
+
+.form-control:focus {
+    border-color: #3f51b5;
+    box-shadow: 0 0 0 0.25rem rgba(63, 81, 181, 0.25);
+}
+
+.alert {
+    border-radius: 8px;
+}
+
+.badge {
+    font-weight: 500;
+    padding: 6px 10px;
+}
+
+.table {
+    font-size: 0.9rem;
+}
+
+.img-fluid {
+    max-height: 300px;
+    object-fit: contain;
+}
+
+footer {
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* Loading spinner for when analysis is running */
+.spinner-container {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .img-fluid {
+        max-height: 200px;
+    }
+}

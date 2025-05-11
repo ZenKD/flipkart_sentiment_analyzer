@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Review Sentiment Analyzer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="text-center">Flipkart Review Sentiment Analyzer</h2>
+                    </div>
+                    <div class="card-body">
+                        {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            {% for message in messages %}
+                            <p>{{ message }}</p>
+                            {% endfor %}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        {% endif %}
+                        {% endwith %}
+
+                        <form method="POST" action="{{ url_for('index') }}">
+                            <div class="mb-3">
+                                <label for="product_url" class="form-label">Flipkart Product URL</label>
+                                <input type="url" class="form-control" id="product_url" name="product_url" 
+                                       placeholder="https://www.flipkart.com/product-name/p/item?pid=XXX&lid=XXX" required>
+                                <div class="form-text">Enter the full URL of a Flipkart product page to analyze its reviews.</div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Analyze Reviews</button>
+                            </div>
+                        </form>
+                        
+                        <div class="mt-4">
+                            <div class="card">
+                                <div class="card-header bg-light">
+                                    <h5>Example URLs to Try</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li><small>https://www.flipkart.com/portronics-sounddrum-1-10w-tws-portable-type-c-charging-10-w-bluetooth-speaker/product-reviews/itmec32d68debb98?pid=ACCG3Y5YNHVGZDRE&lid=LSTACCG3Y5YNHVGZDRE4B36B2&marketplace=FLIPKART</small></li>
+                                        <li><small>https://www.flipkart.com/apple-iphone-14-midnight-128-gb/product-reviews/itm9e6293c322a84?pid=MOBGHWFHECFVMDCX&lid=LSTMOBGHWFHECFVMDCX4YXZJC&marketplace=FLIPKART</small></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card shadow mt-4">
+                    <div class="card-header bg-info text-white">
+                        <h4>How It Works</h4>
+                    </div>
+                    <div class="card-body">
+                        <ol>
+                            <li>Enter a Flipkart product URL in the field above</li>
+                            <li>Our system will scrape customer reviews from the product page</li>
+                            <li>Advanced sentiment analysis is performed on the reviews</li>
+                            <li>View detailed visualizations and insights about customer opinions</li>
+                            <li>Download the analyzed data for further research</li>
+                        </ol>
+                        <div class="alert alert-warning">
+                            <strong>Note:</strong> Analysis may take 1-2 minutes depending on the number of reviews.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="mt-5 text-center text-muted">
+            <p>Flipkart Review Sentiment Analyzer &copy; 2025</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
